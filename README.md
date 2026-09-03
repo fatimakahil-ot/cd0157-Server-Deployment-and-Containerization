@@ -89,7 +89,11 @@ For more detail about each of these steps, see the project lesson.
 
 ## Running Locally with Docker
 
-Create a `.env` file in the project root with your JWT secret:
+A `sample.env` file is included in this repo. Copy it to `.env` (which is gitignored, since it holds your secret):
+```bash
+cp sample.env .env
+```
+`.env` will contain:
 ```
 JWT_SECRET=myjwtsecret
 ```
