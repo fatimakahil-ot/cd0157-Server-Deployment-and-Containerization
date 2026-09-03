@@ -86,3 +86,22 @@ Completing the project involves several steps:
 6. Create a CodeBuild stage which will build, test, and deploy your code
 
 For more detail about each of these steps, see the project lesson.
+
+## Running Locally with Docker
+
+Create a `.env` file in the project root with your JWT secret:
+```
+JWT_SECRET=myjwtsecret
+```
+
+Build the image:
+```bash
+docker build -t myimage .
+```
+
+Run the container, passing in the `.env` file:
+```bash
+docker run --env-file=.env -p 8080:8080 myimage
+```
+
+The API will be available at `http://localhost:8080`.
