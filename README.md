@@ -89,11 +89,7 @@ For more detail about each of these steps, see the project lesson.
 
 ## Running Locally with Docker
 
-A `sample.env` file is included in this repo. Copy it to `.env` (which is gitignored, since it holds your secret):
-```bash
-cp sample.env .env
-```
-`.env` will contain:
+This repo includes a `.env` file with the JWT secret used for local runs:
 ```
 JWT_SECRET=myjwtsecret
 ```

@@ -5,6 +5,8 @@
 *.pyo
 env/
 env*
+# Track .env: this project's rubric requires a committed local-run env file
+!.env
 dist/
 build/
 *.egg
