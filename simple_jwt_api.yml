@@ -32,6 +32,12 @@ spec:
       containers:
         - name: simple-jwt-api
           image: CONTAINER_IMAGE
+          env:
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_SECRET
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
